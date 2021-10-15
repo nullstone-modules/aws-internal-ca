@@ -9,6 +9,6 @@ output "root_key_secret_id" {
 }
 
 output "root_subject" {
-  value       = tls_self_signed_cert.this.subject
+  value       = tls_self_signed_cert.this.subject[0]
   description = "object({ common_name: string, organization: string }) ||| The subject on the root certificate"
 }
