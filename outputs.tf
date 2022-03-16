@@ -12,3 +12,13 @@ output "root_subject" {
   value       = tls_self_signed_cert.this.subject[0]
   description = "object({ common_name: string, organization: string }) ||| The subject on the root certificate"
 }
+
+output "root_acm_cert_arn" {
+  value       = aws_acm_certificate.this.arn
+  description = "string ||| The ARN of the CA certificate imported into AWS ACM"
+}
+
+output "root_acm_cert_domain" {
+  value       = aws_acm_certificate.this.domain_name
+  description = "string ||| The domain of the CA certificate imported into AWS ACM"
+}

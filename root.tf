@@ -18,3 +18,8 @@ resource "tls_self_signed_cert" "this" {
     "cert_signing"
   ]
 }
+
+resource "aws_acm_certificate" "this" {
+  private_key      = tls_private_key.this.private_key_pem
+  certificate_body = tls_self_signed_cert.this.cert_pem
+}
