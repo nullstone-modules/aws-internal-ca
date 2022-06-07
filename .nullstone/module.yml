@@ -1,0 +1,11 @@
+org_name: nullstone
+name: aws-internal-ca
+friendly_name: Internal TLS Authority
+description: Produces a certificate authority that can be used to generate certificates for internal TLS
+category: datastore
+type: ca/internal/aws
+appCategories: []
+layer: database
+is_public: true
+provider_types:
+    - aws
